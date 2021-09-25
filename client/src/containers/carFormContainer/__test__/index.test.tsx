@@ -39,7 +39,8 @@ describe('CarFormContainer', () => {
 		]);
 
 		(ModelService.getModelByBrandId as jest.Mock).mockResolvedValue([
-			{ name: 'A30', id: 1 },
+			{ name: 'F8', id: 1 },
+			{ name: '458 spider', id: 2 },
 		]);
 
 		origErrorConsole = window.console.error;
@@ -121,6 +122,35 @@ describe('CarFormContainer', () => {
 				mockHandleError
 			);
 		});
+	});
+
+	it('should change the selected item when the user selects another model', async () => {
+		render(<CarFormContainer />);
+
+		await waitFor(() => {
+			expect(BrandService.getBrands).toHaveBeenCalledTimes(1);
+			expect(BrandService.getBrands).toHaveBeenCalledWith(mockHandleError);
+		});
+
+		const brandSelectButton = screen.getAllByTestId('toggle-button')[0];
+		userEvent.click(brandSelectButton);
+
+		const selectedBrand = screen.getByRole('option', { name: /ferrari/i });
+		userEvent.click(selectedBrand);
+
+		const ModelSelectButton = screen.getAllByTestId('toggle-button')[1];
+		expect(ModelSelectButton).toHaveTextContent(/select a model/i);
+
+		await waitFor(() => {
+			expect(ModelSelectButton).toHaveTextContent(/F8/i);
+			userEvent.click(ModelSelectButton);
+		});
+
+		const newSelectedModel = screen.getByRole('option', {
+			name: /458 spider/i,
+		});
+		userEvent.click(newSelectedModel);
+		expect(ModelSelectButton).toHaveTextContent(/458 spider/i);
 	});
 
 	it('should call the submit function when the button is clicked', async () => {

@@ -1,4 +1,5 @@
 module.exports = {
+	moduleDirectories: ['node_modules', 'src'],
 	roots: ['<rootDir>/src'],
 	setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
 	coverageReporters: ['html'],
@@ -15,7 +16,6 @@ module.exports = {
 	collectCoverageFrom: [
 		'**/*.{ts, tsx}',
 		'!**/types/**',
-		'!**/styles/**',
 		'!**/utils/axios.ts',
 		'!**/utils/test-utils.ts',
 		'!**/assets/**',

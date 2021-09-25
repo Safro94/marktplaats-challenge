@@ -52,6 +52,10 @@ const CarFormContainer = () => {
 		setSelectedModel(mappedOptions[0]);
 	};
 
+	const handleModelChange = async (item: ISelectOption) => {
+		setSelectedModel(item);
+	};
+
 	const onSubmit = (e: React.MouseEvent) => {
 		// I'm going to put a console log here because
 		// the task doesn't say what should happen after
@@ -92,7 +96,7 @@ const CarFormContainer = () => {
 								<Form.Dropdown
 									labelText='Model:'
 									options={models}
-									onChange={() => {}}
+									onChange={handleModelChange}
 									placeholderText='Select a model'
 									value={selectedModel}
 									disabled={!isSelectValid(selectedModel)}
