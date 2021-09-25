@@ -1,1 +1,122 @@
-{}
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Marktplaats coding challenge API",
+        "description": "This is an API created with Express",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:9000/",
+            "description": "Local server"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Brand"
+        },
+        {
+            "name": "Model"
+        }
+    ],
+    "paths": {
+        "/api/brands": {
+            "description": "Brands resource",
+            "get": {
+                "description": "Get all brands",
+                "tags": ["Brand"],
+                "operationId": "getBrands",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref":"#/components/schemas/Brands"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/models": {
+            "description": "Models resource",
+            "get": {
+                "description": "Get model by brandId",
+                "tags": ["Model"],
+                "operationId": "getModelByBrandId",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "brandId",
+                        "required": true,
+                        "description": "Brand Id",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref":"#/components/schemas/Models"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Brands": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/Brand"
+                }
+            },
+            "Brand": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "ferrari"
+                    }
+                }
+            },
+            "Models": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/Model"
+                }
+            },
+            "Model": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "458 spider"
+                    }
+                }
+            }
+        }
+    }
+}
