@@ -4,9 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/api/index.js",
+    "server": "nodemon src/api/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && npm run build",
+    "test": "cross-env NODE_ENV=test jest --env=node --watchAll",
+    "coverage": "cross-env NODE_ENV=test jest --coverage"
   },
   "keywords": [],
   "author": "Matias Safranchik",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-rate-limit": "^5.3.0",
+    "express-slow-down": "^1.4.0",
+    "helmet": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^27.2.1",
+    "nodemon": "^2.0.13",
+    "swagger-ui-express": "^4.1.6"
+  }
 }
