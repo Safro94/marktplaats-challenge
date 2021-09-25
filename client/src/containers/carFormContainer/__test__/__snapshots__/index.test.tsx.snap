@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarFormContainer should render correctly 1`] = `
+<div
+  class="sc-crrszt egaUpg"
+>
+  <form
+    class="sc-fubCzh hXKFlP"
+    method="POST"
+    rows="3"
+  >
+    <div
+      class="sc-pGacB fEGoAx"
+    >
+      <h2
+        class="sc-jrAFXE dzOuyr"
+      >
+        Buy a car
+      </h2>
+    </div>
+    <div
+      class="sc-pGacB fEGoAx"
+    >
+      <div
+        class="sc-dQoVA YydjD"
+      >
+        <div
+          class="sc-iBPTik fzbgYv"
+        >
+          <label
+            class="sc-kEjbQP bfVRwd"
+            for="S1"
+            id="downshift-0-label"
+          >
+            Brand:
+          </label>
+        </div>
+        <div
+          class="sc-gsTEea lheJaR"
+        >
+          <div
+            class="sc-dlfnuX fTBBZX"
+          >
+            <svg
+              class="sc-hKgJUU jsSjCx"
+            >
+              chevron-down.svg
+            </svg>
+          </div>
+          <button
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="downshift-0-label downshift-0-toggle-button"
+            class="sc-eCstlR dohvVr"
+            data-testid="toggle-button"
+            id="S1"
+            type="button"
+          >
+            Select a brand
+          </button>
+          <ul
+            aria-labelledby="downshift-0-label"
+            class="sc-jSgvzq fyJcCp"
+            id="downshift-0-menu"
+            role="listbox"
+            tabindex="-1"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-dQoVA YydjD"
+      >
+        <div
+          class="sc-iBPTik fzbgYv"
+        >
+          <label
+            class="sc-kEjbQP bfVRwd"
+            for="S2"
+            id="downshift-1-label"
+          >
+            Model:
+          </label>
+        </div>
+        <div
+          class="sc-gsTEea lheJaR"
+        >
+          <div
+            class="sc-dlfnuX fTBBZX"
+          >
+            <svg
+              class="sc-hKgJUU jsSjCx"
+            >
+              chevron-down.svg
+            </svg>
+          </div>
+          <button
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="downshift-1-label downshift-1-toggle-button"
+            class="sc-eCstlR kbrHkS"
+            data-testid="toggle-button"
+            disabled=""
+            id="S2"
+            type="button"
+          >
+            Select a model
+          </button>
+          <ul
+            aria-labelledby="downshift-1-label"
+            class="sc-jSgvzq fyJcCp"
+            id="downshift-1-menu"
+            role="listbox"
+            tabindex="-1"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-dQoVA YydjD"
+      >
+        <label
+          class="sc-kEjbQP bfVRwd"
+          for="T"
+        >
+          Keywords:
+        </label>
+        <input
+          class="sc-iqHYmW gZgkqK"
+          id="T"
+          name="keywords"
+          placeholder="Keywords"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="sc-pGacB fEGoAx"
+    >
+      <button
+        class="sc-bdfBQB bLzkoJ"
+        disabled=""
+        id="B"
+        type="submit"
+      >
+        Search Cars
+      </button>
+    </div>
+  </form>
+</div>
+`;
