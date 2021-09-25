@@ -1,9 +1,16 @@
 import { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { theme } from '../theme';
+
 const AllTheProviders: FC = ({ children }) => {
-	return <Router>{children}</Router>;
+	return (
+		<ThemeProvider theme={theme}>
+			<Router>{children}</Router>
+		</ThemeProvider>
+	);
 };
 
 const customRender = (
