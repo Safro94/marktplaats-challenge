@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "458 Spider",
+    "brandId": 5,
+    "brand": "ferrari"
+  },
+  {
+    "id": 2,
+    "name": "C30",
+    "brandId": 1,
+    "brand": "mercedes-benz"
+  },
+  {
+    "id": 3,
+    "name": "A38",
+    "brandId": 1,
+    "brand": "mercedes-benz"
+  },
+  {
+    "id": 4,
+    "name": "A1",
+    "brandId": 2,
+    "brand": "audi"
+  },
+  {
+    "id": 5,
+    "name": "R8",
+    "brandId": 2,
+    "brand": "audi"
+  },
+  {
+    "id": 6,
+    "name": "Panamera",
+    "brandId": 3,
+    "brand": "porsche"
+  },
+  {
+    "id": 7,
+    "name": "Cayenne",
+    "brandId": 3,
+    "brand": "porsche"
+  },
+  {
+    "id": 8,
+    "name": "M3",
+    "brandId": 4,
+    "brand": "bmw"
+  },
+  {
+    "id": 9,
+    "name": "X6",
+    "brandId": 4,
+    "brand": "bmw"
+  },
+  {
+    "id": 10,
+    "name": "F8",
+    "brandId": 5,
+    "brand": "ferrari"
+  }
+]

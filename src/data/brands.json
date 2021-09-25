@@ -1,0 +1,42 @@
+[
+  {
+    "num_models": 18,
+    "max_car_id": 270,
+    "id": 1,
+    "name": "mercedes-benz",
+    "avg_horsepower": 333.94444444444446,
+    "avg_price": 80681.94444444444
+  },
+  {
+    "num_models": 22,
+    "max_car_id": 21,
+    "id": 2,
+    "name": "audi",
+    "avg_horsepower": 340.59090909090907,
+    "avg_price": 66631.81818181818
+  },
+  {
+    "num_models": 8,
+    "max_car_id": 301,
+    "id": 3,
+    "name": "porsche",
+    "avg_horsepower": 475.25,
+    "avg_price": 203787.5
+  },
+  {
+    "num_models": 31,
+    "max_car_id": 64,
+    "id": 4,
+    "name": "bmw",
+    "avg_horsepower": 379.2258064516129,
+    "avg_price": 74501.6129032258
+  },
+  {
+    "num_models": 4,
+    "max_car_id": 118,
+    "id": 5,
+    "name": "ferrari",
+    "avg_horsepower": 633.0,
+    "avg_price": 276428.0
+  }
+]
