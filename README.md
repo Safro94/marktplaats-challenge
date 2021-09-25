@@ -130,4 +130,4 @@ if you want to check the code coverage. Both projects have a coverage threshold 
 
 ## Technical decisions
 
-See this [file](https://github.com/Safro94/marktplaats-challenge/docs/blob/master/decisions.md).
+See this [file](https://github.com/Safro94/marktplaats-challenge/blob/master/docs/decisions.md).
