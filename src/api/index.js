@@ -11,6 +11,8 @@ const swaggerDocument = require('./swagger.json');
 const errorHandler = require('../middlewares/errorHandler');
 const notFound = require('../middlewares/notFound');
 
+const brands = require('./routes/brands');
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -39,6 +41,7 @@ app.use(express.json());
 
 // Routes
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/brands', brands);
 
 // Not found
 app.use(notFound);
