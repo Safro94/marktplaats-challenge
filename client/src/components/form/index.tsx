@@ -1,4 +1,5 @@
 import Button from '../button';
+import Select, { ISelectProps } from '../select';
 
 import {
 	FormContainer,
@@ -26,6 +27,8 @@ const Form: React.FunctionComponent<IFormProps> & {
 	Label: React.FunctionComponent<ILabelProps>;
 } & { Title: React.FunctionComponent } & {
 	ElementsContainer: React.FunctionComponent;
+} & {
+	Dropdown: React.FunctionComponent<ISelectProps>;
 } = ({ rows, children, ...rest }) => {
 	return (
 		<FormContainer rows={rows} method='POST' {...rest}>
@@ -53,6 +56,28 @@ const Input = ({
 	return <FormInput type={type} {...rest} />;
 };
 
+const Dropdown = ({
+	options,
+	onChange,
+	value,
+	placeholderText,
+	disabled,
+	id,
+	...rest
+}: ISelectProps) => {
+	return (
+		<Select
+			id={id}
+			options={options}
+			onChange={onChange}
+			value={value}
+			placeholderText={placeholderText}
+			disabled={disabled}
+			{...rest}
+		/>
+	);
+};
+
 const Submit = ({
 	children,
 	onClick,
@@ -71,6 +96,7 @@ Form.Title = Title;
 Form.ElementsContainer = ElementsContainer;
 Form.Label = Label;
 Form.Input = Input;
+Form.Dropdown = Dropdown;
 Form.Submit = Submit;
 
 export default Form;
